@@ -33,6 +33,7 @@ document.getElementById("stop-button").addEventListener("click", function () {
 
 document.getElementById("restart-button").addEventListener("click", function () {
     clearInterval(interval_id);
+    stopped = true;
     board   = new Board(24, 24);
     Loop();
 });

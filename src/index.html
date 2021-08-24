@@ -7,12 +7,15 @@
     <title>GameOfLife</title>
 </head>
 <body style="background-color: #1a1817;">
-    <button id="start-button">Start</button>
-    <button id="stop-button">Stop</button>
-    <button id="restart-button">Restart</button>
-    <button id="custom-button">Custom map</button>
 
     <div class="center-div">
+        <div class="button-div">
+            <button id="start-button" class="gol-button">Start</button>
+            <button id="stop-button" class="gol-button">Stop</button>
+            <button id="restart-button" class="gol-button">Restart</button>
+            <button id="custom-button" class="gol-button">Custom map</button>
+        </div>
+
         <canvas id="grid-canvas" width="480" height="480"></canvas>
         <canvas id="gol-canvas" width="480" height="480"></canvas>
     </div>

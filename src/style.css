@@ -1,4 +1,18 @@
 
+
+@media screen and (max-width: 800px) {
+    .center-div {
+        display: none !important;
+    }
+    #gol-canvas {
+        display: none !important;
+    }
+    #grid-canvas {
+        display: none !important;
+    }
+}
+
+
 .center-div {
     position: absolute;
     /*background-color: #1a1817;*/
@@ -23,4 +37,25 @@
     top:  50%;
     transform: translate(-50%, -50%);
     /*border: 5px solid black;*/
+}
+
+.button-div {
+    position: absolute;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gol-button {
+    margin: 0px 5px 0px 5px;
+    padding: 5px 10px 5px 10px;
+    background-color: #379f18;
+    color: white;
+    border: 0px solid black;
+    box-shadow: 0px 0px 8px #379f18;
+    border-radius: 2px;
+}
+
+.gol-button:hover {
+    background-color: #277c0d;
 }
