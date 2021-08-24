@@ -6,7 +6,7 @@ this grid is seen as dead).
 -------------------------------------------------------------------------
 ### Example:
 
-
+![Alt Text](https://github.com/fredboe/GameOfLife/blob/main/images/GameOfLife.gif)
 
 -------------------------------------------------------------------------
 
