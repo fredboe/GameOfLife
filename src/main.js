@@ -3,18 +3,20 @@ var custom  = false;
 var stopped = true;
 var board   = new Board(24, 24);
 
+var interval_id = undefined;
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function Loop() {
-    board.render();
-    await sleep(2000);
-    while (!stopped)
+function Loop() {
+    setTimeout(() => { board.render(); }, 1000);
+    if (!stopped)
     {
-        board.update();
-        board.render();
-        await sleep(1000);
+        interval_id = setInterval(() => {
+            board.update();
+            board.render();
+        }, 1000);
     }
 }
 
@@ -26,15 +28,18 @@ document.getElementById("start-button").addEventListener("click", function () {
 
 document.getElementById("stop-button").addEventListener("click", function () {
     stopped = true;
+    clearInterval(interval_id);
 });
 
 document.getElementById("restart-button").addEventListener("click", function () {
+    clearInterval(interval_id);
     board   = new Board(24, 24);
-    stopped = false;
     Loop();
 });
 
 document.getElementById("custom-button").addEventListener("click", function () {
+    stopped = true;
+    clearInterval(interval_id);
     custom = true;
     board.clear();
 });
